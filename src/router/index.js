@@ -3,6 +3,12 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
+// 自动化注册路由
+const routerContext = require.context('./', true, /\.js$/)
+routerContext.keys().forEach(fileName => {
+  // 获取组件配置
+  const componentConfig = routerContext(fileName)
+})
 
 const routes = [
   {
@@ -10,15 +16,6 @@ const routes = [
     name: "Home",
     component: Home
   },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
 ];
 
 const router = new VueRouter({
