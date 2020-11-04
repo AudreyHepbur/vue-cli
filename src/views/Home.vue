@@ -14,6 +14,7 @@ export default {
   },
   created () { },
   mounted () {
+    console.log('this.store :>> ', this.$store);
   },
   activited () { },
   update () { },
