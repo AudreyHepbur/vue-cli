@@ -8,10 +8,7 @@
       </div>
       <div class="timeline_icon">
         <svg viewBox="0 0 102 102">
-          <circle cx="51"
-                  cy="51"
-                  r="50"
-                  transform="rotate(90 51 51)"></circle>
+          <circle cx="51" cy="51" r="50" transform="rotate(90 51 51)"></circle>
         </svg>
       </div>
       <ul class="timeline_list">
@@ -72,16 +69,16 @@ export default {
   name: "",
   components: {},
   props: {},
-  data () {
+  data() {
     return {};
   },
-  created () { },
-  mounted () {
+  created() {},
+  mounted() {
     console.log("this.store :>> ", this.$store);
   },
-  activited () { },
-  update () { },
-  beforeRouteUpdate () { },
+  activited() {},
+  update() {},
+  beforeRouteUpdate() {},
   methods: {},
   filter: {},
   computed: {},
